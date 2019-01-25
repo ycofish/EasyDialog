@@ -260,4 +260,16 @@ class RYEasyDialog<T> {
     }
 
 
+    fun createCustomDialog(layout: Int) : Dialog {
+        val dialog = Dialog(context)
+        dialog.setContentView(layout)
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        if (!canCancel) {
+            dialog.setCanceledOnTouchOutside(false)
+            dialog.setCancelable(false)
+        }
+        dialog.show()
+        return dialog
+    }
+
 }
