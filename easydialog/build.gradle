@@ -11,7 +11,7 @@ publish {
     groupId = 'com.ryanyu'
     uploadName = 'EasyDialog'
     artifactId = 'easy-dialog'
-    publishVersion = '0.0.2'
+    publishVersion = '0.0.3'
     desc = 'Ryan Yu Easy Dialog'
     website = 'https://github.com/ycofish/easydialog'
 }
@@ -19,8 +19,6 @@ publish {
 
 android {
     compileSdkVersion 28
-
-
 
     defaultConfig {
         minSdkVersion 21

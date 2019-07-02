@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.View
 import android.content.DialogInterface
+import android.widget.FrameLayout
 import android.widget.TextView
 
 
@@ -95,6 +96,7 @@ class RYEasyDialog<T> {
         val dialog = Dialog(context)
         dialog.setContentView(layout)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window?.setLayout(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
         titleView.text = context?.resources?.getString(R.string.global_network_error)
         confirmBtn.text = context?.resources?.getString(R.string.global_retry)
         cancelBtn.text = context?.resources?.getString(R.string.gloda_cancel)
@@ -151,6 +153,7 @@ class RYEasyDialog<T> {
         val dialog = Dialog(context)
         dialog.setContentView(layout)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window?.setLayout(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
         titleView.text = title
         confirmBtn.text = context?.resources?.getString(R.string.global_retry)
         cancelBtn.text = context?.resources?.getString(R.string.gloda_cancel)
@@ -211,6 +214,7 @@ class RYEasyDialog<T> {
         val dialog = Dialog(context)
         dialog.setContentView(layout)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window?.setLayout(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
         titleView.text = title
         confirmBtn.text = confirm
         cancelBtn.text = cancel
@@ -263,6 +267,7 @@ class RYEasyDialog<T> {
     fun createCustomDialog(layout: Int) : Dialog {
         val dialog = Dialog(context)
         dialog.setContentView(layout)
+        dialog.window?.setLayout(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         if (!canCancel) {
             dialog.setCanceledOnTouchOutside(false)
